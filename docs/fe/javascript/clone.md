@@ -25,15 +25,15 @@
 ```js
 const obj1 = {
   name: 'maomao',
-  props: { a: 1 }
+  props: { a: 1 },
 }
 
 const obj2 = Object.assign({}, obj1)
-obj2.name = '茂茂'
+obj2.name = '文浩'
 obj2.props.a++
 
 obj1 // { name: 'maomao', props: { a: 2 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj2 // { name: '文浩', props: { a: 2 } }
 ```
 
 ### `Array.prototype.concat()`
@@ -68,15 +68,15 @@ arr2 // ['arr2', 2, 3, ['arr2', 5]];
 /* 对象 */
 const obj1 = {
   name: 'maomao',
-  props: { a: 1 }
+  props: { a: 1 },
 }
 
 const obj2 = { ...obj1 }
-obj2.name = '茂茂'
+obj2.name = '文浩'
 obj2.props.a++
 
 obj1 // { name: 'maomao', props: { a: 2 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj2 // { name: '文浩', props: { a: 2 } }
 
 /* 数组 */
 const arr1 = [1, 2, 3, [4, 5]]
@@ -100,15 +100,15 @@ arr2 // ['arr2', 2, 3, ['arr2', 5]];
 ```js
 const obj1 = {
   name: 'maomao',
-  props: { a: 1 }
+  props: { a: 1 },
 }
 
 const obj2 = JSON.parse(JSON.stringify(obj1))
-obj2.name = '茂茂'
+obj2.name = '文浩'
 obj2.props.a++
 
 obj1 // { name: 'maomao', props: { a: 1 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj2 // { name: '文浩', props: { a: 2 } }
 ```
 
 **`JSON.parse(JSON.stringify())` 存在明显的弊端：**
@@ -132,10 +132,10 @@ const obj1 = {
   f: -Infinity,
   g: map,
   h: new Date(),
-  i: () => {}
+  i: () => {},
 }
 Object.defineProperty(obj1, 'j', {
-  value: 'string'
+  value: 'string',
 })
 
 const obj2 = JSON.parse(JSON.stringify(obj1))
@@ -213,7 +213,7 @@ function cloneUsingChannel(obj) {
 
 ```js
 const obj1 = {
-  fn: function () {}
+  fn: function () {},
 }
 const obj2 = cloneUsingChannel(obj1)
 // Uncaught (in promise) DOMException: Failed to execute 'postMessage' on 'MessagePort': function () {} could not be cloned.

@@ -5,14 +5,14 @@ export const NAV_DATA: NavData[] = [
     title: 'AI 助手',
     items: [
       {
-        icon: '/icons/chatgpt.png',
-        title: 'ChatGPT（最强）',
-        link: 'https://chat.openai.com/chat',
-      },
-      {
         icon: '/icons/yeschat.png',
         title: 'yeschat(20条4.0)',
         link: 'https://www.yeschat.ai/zh-CN/yeschat',
+      },
+      {
+        icon: '/icons/chatgpt.png',
+        title: 'ChatGPT',
+        link: 'https://chat.openai.com/chat',
       },
       {
         icon: '/icons/Poe.png',
@@ -75,13 +75,13 @@ export const NAV_DATA: NavData[] = [
     title: '个人站点',
     items: [
       {
-        icon: '/logo.jpg',
+        icon: '/logo.png',
         title: '前端日常笔记',
         desc: '日常笔记记录（零零散散啥都记系列）',
         link: 'https://github.com/maomao1996/daily-notes',
       },
       {
-        icon: '/logo.jpg',
+        icon: '/logo.png',
         title: '前端思维导图',
         desc: '用思维导图的方式总结个人所学知识',
         link: 'https://mindmap.fe-mm.com',

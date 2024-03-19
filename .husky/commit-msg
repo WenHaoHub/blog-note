@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx femm-verify-commit $1
+npx @whdev/verify-commit $1

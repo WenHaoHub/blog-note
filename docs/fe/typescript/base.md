@@ -30,7 +30,7 @@ let isFlag: boolean = true
 
 ```ts
 let name: string = 'maomao'
-name = '茂茂'
+name = '文浩'
 ```
 
 #### number 数字类型
@@ -58,8 +58,8 @@ let big: bigint = 19961996n
 
 ```ts
 let sym: symbol = Symbol('maomao')
-sym = Symbol('茂茂') // OK
-sym = '茂茂' // Error
+sym = Symbol('文浩') // OK
+sym = '文浩' // Error
 ```
 
 ### `object`
@@ -98,7 +98,7 @@ create(undefined) // Error
 let value: any = 1
 free = { name: 'maomao' }
 free.log()
-free = '茂茂'
+free = '文浩'
 ```
 
 :::warning 注意点
@@ -232,7 +232,7 @@ tuple[0] = 666 // Error
 enum Color {
   Red,
   Green,
-  Blue
+  Blue,
 }
 const c: Color = Color.Green
 ```
@@ -243,7 +243,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green,
-  Blue
+  Blue,
 }
 const c: Color = Color.Green
 ```
@@ -254,7 +254,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green = 2,
-  Blue = 4
+  Blue = 4,
 }
 const c: Color = Color.Green
 ```
@@ -265,7 +265,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green,
-  Blue
+  Blue,
 }
 const colorName: string = Color[2]
 
@@ -299,7 +299,7 @@ interface Person {
 
 const person: Person = {
   name: 'maomao',
-  age: 18
+  age: 18,
 }
 ```
 
@@ -317,7 +317,7 @@ const person1: Person = {
 }
 // Error: "gender" 不在类型 "Person" 中
 const person2: Person = {
-  name: '茂茂',
+  name: '文浩',
   age: 18,
   gender: 'male'
 }
@@ -334,7 +334,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: 'maomao'
+  name: 'maomao',
 }
 ```
 
@@ -348,7 +348,7 @@ interface Person {
 
 // Error: "gender" 不在类型 "Person" 中
 const person: Person = {
-  name: '茂茂',
+  name: '文浩',
   age: 18,
   gender: 'male'
 }
@@ -367,7 +367,7 @@ interface Person {
 
 const person: Person = {
   name: 'maomao',
-  gender: 'male'
+  gender: 'male',
 }
 ```
 
@@ -384,7 +384,7 @@ interface Person {
 
 // Error: 属性 "age" 与索引签名不兼容，不能将类型 "number" 分配给类型 "string"
 const person: Person = {
-  name: '茂茂',
+  name: '文浩',
   age: 18,
   gender: 'male'
 }
@@ -400,9 +400,9 @@ interface Person {
 }
 
 const person: Person = {
-  name: '茂茂',
+  name: '文浩',
   age: 18,
-  gender: 'male'
+  gender: 'male',
 }
 ```
 
@@ -420,7 +420,7 @@ interface Person {
 
 const person: Person = {
   id: 1,
-  name: '茂茂',
+  name: '文浩',
   age: 18,
   gender: 'male'
 }
@@ -441,7 +441,7 @@ interface Person {
 
 // Error: 缺少属性 "id"
 const person: Person = {
-  name: '茂茂',
+  name: '文浩',
   age: 18,
   gender: 'male'
 }
@@ -470,7 +470,7 @@ type Person = {
 **字符串字面量类型**：
 
 ```ts
-type Name = 'maomao' | 'maomao1996' | '茂茂'
+type Name = 'maomao' | 'maomao1996' | '文浩'
 ```
 
 **数字字面量类型**：

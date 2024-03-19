@@ -4,10 +4,10 @@ layoutClass: 'm-home-layout'
 
 hero:
   name: wh的知识库
-  text: 技术积累、知识参考
-  tagline: 不积跬步 无以至千里
+  text: 不积跬步 无以至千里
+  tagline: 借鉴 探索 沉淀 回报
   image:
-    src: /logo.jpg
+    src: /logo.png
     alt: wenhao的的博客
   actions:
     - text: 前端基石
@@ -64,6 +64,6 @@ features:
 .m-home-layout .item:last-child .details {
   display: flex;
   justify-content: flex-end;
-  align-items: end;
+  align-items: flex-end;
 }
 </style>

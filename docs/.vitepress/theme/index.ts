@@ -27,7 +27,7 @@ if (typeof window !== 'undefined') {
       return Promise.all(
         keyList.map(function (key) {
           return caches.delete(key)
-        })
+        }),
       )
     })
   }
@@ -53,11 +53,11 @@ export default {
        * https://vitepress.dev/guide/extending-default-theme#layout-slots
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
        */
-      'nav-bar-title-after': () => h(MNavVisitor),
+      // 'nav-bar-title-after': () => h(MNavVisitor),//访问量统计 会启用python 占用8888端口
       // 页脚
       'doc-after': () => h(MDocFooter),
       // 右下角捐赠
-      // 'aside-bottom': () => h(MAsideSponsors) 
+      // 'aside-bottom': () => h(MAsideSponsors)
     })
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
@@ -71,10 +71,10 @@ export default {
       watch(
         () => router.route.data.relativePath,
         () => updateHomePageStyle(location.pathname === '/'),
-        { immediate: true }
+        { immediate: true },
       )
     }
-  }
+  },
 }
 
 if (typeof window !== 'undefined') {

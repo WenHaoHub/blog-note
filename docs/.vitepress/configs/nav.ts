@@ -12,8 +12,16 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/fe',
   },
-  { text: '框架设计', link: '/analysis/utils/only-allow',activeMatch: '^/analysis', },
-  { text: 'ms', link: '/ms/index',activeMatch: '/ms', },
+  {
+    text: 'nb博客',
+    items: [
+      { text: '木易杨(js)', link: 'https://muyiy.cn/' },
+      { text: '这波能反杀(js)', link: 'https://www.jianshu.com/u/10ae59f49b13' },
+      { text: '小林(计算机基础)', link: 'https://xiaolincoding.com/' },
+      { text: '小马部落阁', link: 'https://maqib.cn/projects' },
+    ],
+  },
+  { text: '框架设计', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
     text: 'Workflow',
     items: [
@@ -77,6 +85,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'git', link: 'https://github.com/WenHaoHub' },
       { text: 'csdn', link: 'https://blog.csdn.net/qq_41769047?type=blog' },
       { text: '掘金', link: 'https://juejin.cn/user/3219786927444877' },
+      { text: '语雀', link: 'https://www.yuque.com/dashboard' },
       {
         text: '油猴脚本',
         link: 'https://github.com/maomao1996/tampermonkey-scripts',

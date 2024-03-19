@@ -11,7 +11,6 @@ const DEV = inject('DEV') as Ref<boolean>
 <template>
   <div class="copyright">
     <!-- <img
-      v-if="!DEV"
       class="visitor"
       :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
       title="当前页面累计访问数"

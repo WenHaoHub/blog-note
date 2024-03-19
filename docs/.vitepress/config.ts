@@ -21,28 +21,28 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
 
-    logo: '/logo.jpg',
+    logo: '/logo.png',
 
     nav,
     sidebar,
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
-      label: '本页目录'
+      label: '本页目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/WenHaoHub' }],
 
     footer: {
       message: '参考：https://github.com/maomao1996/vitepress-nav-template',
-      copyright: 'Copyright © 2019-present wh'
+      copyright: 'Copyright © 2019-present wh',
     },
 
     darkModeSwitchLabel: '外观',
@@ -54,8 +54,8 @@ export default defineConfig({
 
     docFooter: {
       prev: '上一篇',
-      next: '下一篇'
-    }
+      next: '下一篇',
+    },
   },
 
   /* 生成站点地图 */
