@@ -25,9 +25,9 @@ features:
     link: /fe/javascript/types
     linkText: 前端常用知识
   - icon: 📘
-    title: 源码阅读
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: /analysis/utils/only-allow
+    title: 工程构建
+    details: 2024前端存活基石<br />教学总结
+    link: /project/vue/index
     linkText: 源码阅读
   - icon: 💡
     title: Workflow

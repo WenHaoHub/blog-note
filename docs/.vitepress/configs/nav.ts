@@ -1,16 +1,15 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '导航', link: '/nav', activeMatch: '^/nav' },
   {
     text: '前端物语',
     items: [
       { text: 'JavaScript 基础知识', link: '/fe/javascript/types' },
       { text: 'ES6 常用知识', link: '/fe/es6/' },
       { text: 'TypeScript 基础知识', link: '/fe/typescript/base' },
-      { text: '浏览器相关知识', link: '/fe/browser/' },
+      { text: '浏览器相关知识', link: '/fe/browser/' }
     ],
-    activeMatch: '^/fe',
+    activeMatch: '^/fe'
   },
   {
     text: 'nb博客',
@@ -18,10 +17,19 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '木易杨(js)', link: 'https://muyiy.cn/' },
       { text: '这波能反杀(js)', link: 'https://www.jianshu.com/u/10ae59f49b13' },
       { text: '小林(计算机基础)', link: 'https://xiaolincoding.com/' },
-      { text: '小马部落阁', link: 'https://maqib.cn/projects' },
-    ],
+      { text: '小马部落阁', link: 'https://maqib.cn/projects' }
+    ]
   },
-  { text: '框架设计', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
+  {
+    text: '工程化',
+    activeMatch: '^/project',
+    items: [
+      { text: 'Vue', link: '/project/vue/index' },
+      { text: 'React', link: '/project/react/index' },
+      { text: 'Docker', link: '/project/docker/index' },
+      { text: 'npm发包', link: '/project/npm/creat-npm.md' }
+    ]
+  },
   {
     text: 'Workflow',
     items: [
@@ -30,20 +38,20 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: '工具库整理', link: '/workflow/utils/library' },
           { text: '常用正则整理', link: '/workflow/utils/regexp' },
-          { text: '常用方法整理', link: '/workflow/utils/function' },
-        ],
+          { text: '常用方法整理', link: '/workflow/utils/function' }
+        ]
       },
       {
         text: 'CSS 相关',
         items: [
           { text: 'CSS 语法', link: '/workflow/css/spec' },
           { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
-          { text: 'Sass 常用技巧', link: '/workflow/sass/' },
-        ],
+          { text: 'Sass 常用技巧', link: '/workflow/sass/' }
+        ]
       },
       {
         text: 'Vue 小技巧',
-        link: '/workflow/vue/',
+        link: '/workflow/vue/'
       },
       { text: 'npm 常用命令', link: '/workflow/node/npm' },
       // {
@@ -55,9 +63,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       //   ]
       // },
       { text: 'Git 相关技巧', link: '/workflow/git/' },
-      { text: 'Git 命令清单', link: '/workflow/git/command' },
+      { text: 'Git 命令清单', link: '/workflow/git/command' }
     ],
-    activeMatch: '^/workflow',
+    activeMatch: '^/workflow'
   },
   { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
   {
@@ -71,14 +79,15 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'Windows 平台', link: '/efficiency/software/windows' },
           { text: '浏览器设置与扩展', link: '/efficiency/software/browser' },
           { text: 'Visual Studio Code 配置', link: '/efficiency/software/vscode' },
-          { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' },
-        ],
+          { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' }
+        ]
       },
       { text: '在线工具', link: '/efficiency/online-tools' },
-      { text: '书签脚本', link: '/efficiency/bookmark-scripts' },
+      { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
     ],
-    activeMatch: '^/efficiency',
+    activeMatch: '^/efficiency'
   },
+  { text: '导航', link: '/nav', activeMatch: '^/nav' },
   {
     text: 'wh社区',
     items: [
@@ -88,8 +97,8 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '语雀', link: 'https://www.yuque.com/dashboard' },
       {
         text: '油猴脚本',
-        link: 'https://github.com/maomao1996/tampermonkey-scripts',
-      },
-    ],
-  },
+        link: 'https://github.com/maomao1996/tampermonkey-scripts'
+      }
+    ]
+  }
 ]
