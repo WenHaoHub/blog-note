@@ -44,9 +44,9 @@ features:
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
     link: /pit/npm
     linkText: 踩坑记录
-  - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
+  - icon: ✍️
+    title: 忆往昔
+    details: '<small class="bottom-small">想写一些往事随笔</small>'
     link: /mao
 ---
 

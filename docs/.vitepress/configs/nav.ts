@@ -27,7 +27,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Vue', link: '/project/vue/index' },
       { text: 'React', link: '/project/react/index' },
       { text: 'Docker', link: '/project/docker/index' },
-      { text: 'npm发包', link: '/project/npm/creat-npm.md' }
+      { text: 'node', link: '/project/node/index.md' }
     ]
   },
   {
@@ -53,21 +53,22 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: 'Vue 小技巧',
         link: '/workflow/vue/'
       },
-      { text: 'npm 常用命令', link: '/workflow/node/npm' },
+
       // {
       //   text: '终端相关',
       //   items: [
-      { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+      { text: 'npm 命令', link: '/project/npm/npm-order.md' },
       { text: '命令行工具', link: '/workflow/terminal/toolkit' },
       { text: 'Shell 命令', link: '/workflow/terminal/shell' },
+      { text: 'linux 命令', link: '/workflow/terminal/linux' },
       //   ]
       // },
       { text: 'Git 相关技巧', link: '/workflow/git/' },
-      { text: 'Git 命令清单', link: '/workflow/git/command' }
+      { text: 'Git 命令清单', link: '/workflow/git/command' },
+      { text: 'md语法', link: '/workflow/markdown/index' }
     ],
     activeMatch: '^/workflow'
   },
-  { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
   {
     text: '提效工具',
     items: [

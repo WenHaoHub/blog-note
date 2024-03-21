@@ -51,6 +51,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/fe/coding/'
     }
   ],
+  '/project/node/': [
+    {
+      text: 'npm 相关',
+      // collapsed: false,
+      items: [
+        { text: 'npm 进阶', link: '/project/node/index.md' },
+        { text: 'npm 发包', link: '/project/node/creat-npm.md' },
+        { text: 'npm link', link: '/project/node/npm-link.md' },
+        { text: 'npm 常用命令', link: '/project/node/npm-order.md' },
+        { text: 'npm 常见问题', link: '/project/node/npm-debug.md' }
+      ]
+    },
+    {
+      text: 'node',
+      // collapsed: false,
+      items: [{ text: '全局变量', link: '/project/node/node-global.md' }]
+    }
+  ],
   '/project/': [
     {
       text: '工程化',
@@ -58,11 +76,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [
         { text: 'Vue', link: '/project/vue/index' },
         { text: 'React', link: '/project/react/index' },
-        { text: 'Docker', link: '/project/docker/index' },
-        { text: 'npm发包', link: '/project/npm/creat-npm.md' }
+        { text: 'Docker', link: '/project/docker/index' }
       ]
     }
   ],
+
   '/workflow/': [
     {
       text: '常用工具/方法',
@@ -95,9 +113,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: '终端相关',
       collapsed: false,
       items: [
-        { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
         { text: '命令行工具', link: '/workflow/terminal/toolkit' },
-        { text: 'Shell 命令', link: '/workflow/terminal/shell' }
+        { text: 'Shell 命令', link: '/workflow/terminal/shell' },
+        { text: 'linux 命令', link: '/workflow/terminal/linux' }
       ]
     },
     {
@@ -107,6 +125,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Git 相关技巧', link: '/workflow/git/' },
         { text: 'Git 命令清单', link: '/workflow/git/command' }
       ]
+    },
+    {
+      text: 'md 语法',
+      collapsed: false,
+      items: [{ text: '常用语法', link: '/workflow/markdown/' }]
     }
   ],
   '/efficiency/': [

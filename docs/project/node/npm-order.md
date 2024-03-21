@@ -1,5 +1,7 @@
 # npm 常用命令
 
+（全称 Node Package Manager）是 Node.js 的包管理工具，它是一个基于命令行的工具，用于帮助开发者在自己的项目中安装、升级、移除和管理依赖项。 npm
+
 ## 镜像相关
 
 设置淘宝镜像
@@ -28,6 +30,9 @@ npm list --depth 0
 npm list -g --depth 0
 # yarn
 yarn global list --depth=0
+
+#查看指定包的详细信息。
+npm info <package-name>
 ```
 
 ## 查看依赖包的安装路径
