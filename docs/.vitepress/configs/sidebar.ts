@@ -64,6 +64,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
+      text: 'cli',
+      // collapsed: false,
+      items: [{ text: '搭建教程', link: '/project/node/node-cli.md' }]
+    },
+    {
       text: 'node',
       // collapsed: false,
       items: [{ text: '全局变量', link: '/project/node/node-global.md' }]

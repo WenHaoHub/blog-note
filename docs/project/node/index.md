@@ -56,7 +56,7 @@
 
 ::: tip
 
-知识点来了，package-lock.json 帮我们做了缓存，他会通过 `name + version + integrity` 信息生成一个唯一的 key，这个 key 能找到对应的 index-v5 下的缓存记录 也就是 npm cache 文件夹下的\_cacache
+知识点来了，package-lock.json 帮我们做了缓存，他会通过 `name + version + integrity` 信息生成一个唯一的 key，这个 key 能找到对应的 index-v5 下的缓存记录 也就是 `C:\Users\user\AppData\Local\npm-cache\_cacache` 文件夹下的\_cacache
 
 如果发现有缓存记录，就会找到 tar 包的 hash 值，然后将对应的二进制文件解压到 node_modeules
 

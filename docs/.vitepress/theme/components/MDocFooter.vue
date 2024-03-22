@@ -19,8 +19,10 @@ const DEV = inject('DEV') as Ref<boolean>
     ©️ Copyright (c) 2024 wenhao
   </div>
   <p class="notice">
-    👮备案号:
-    <span>蜀ICP备2024061733号</span>
+    <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">
+      👮备案号:
+      <span>蜀ICP备2024061733号</span>
+    </a>
   </p>
 </template>
 

@@ -20,13 +20,13 @@ hero:
     #   theme: alt
 features:
   - icon: 📖
-    title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
+    title: 三剑客
+    details: HTML/CSS/JS<small>（常用知识点）</small><br />饭碗知识整理
     link: /fe/javascript/types
     linkText: 前端常用知识
-  - icon: 📘
-    title: 工程构建
-    details: 2024前端存活基石<br />教学总结
+  - icon: 📕
+    title: 自定红宝书
+    details: 2024前端项目工程是怎样的<br />教学总结
     link: /project/vue/index
     linkText: 源码阅读
   - icon: 💡
@@ -34,14 +34,14 @@ features:
     details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
     link: /workflow/utils/library
     linkText: 常用工具库
-  - icon: 🧰
+  - icon: 🐌
     title: 提效工具
     details: 工欲善其事，必先利其器<br />记录开发和日常使用中所用到的软件、插件、扩展等
     link: /efficiency/online-tools
     linkText: 提效工具
-  - icon: 🐞
-    title: 踩坑记录
-    details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
+  - icon: 🚀
+    title: node基石
+    details: node助你一臂之力<br />拓宽你的开发面
     link: /pit/npm
     linkText: 踩坑记录
   - icon: ✍️
