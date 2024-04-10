@@ -21,7 +21,7 @@ hero:
 features:
   - icon: 📖
     title: 三剑客
-    details: HTML/CSS/JS<small>（常用知识点）</small><br />饭碗知识整理
+    details: HTML/CSS/JS<small>（常用知识点）</small><br />我的饭碗是如何构成的
     link: /fe/javascript/types
     linkText: 前端常用知识
   - icon: 📕
@@ -42,8 +42,8 @@ features:
   - icon: 🚀
     title: node基石
     details: node助你一臂之力<br />拓宽你的开发面
-    link: /pit/npm
-    linkText: 踩坑记录
+    link: /project/node/
+    linkText: 关于node
   - icon: ✍️
     title: 忆往昔
     details: '<small class="bottom-small">想写一些往事随笔</small>'

@@ -11,15 +11,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/fe'
   },
-  {
-    text: 'nb博客',
-    items: [
-      { text: '木易杨(js)', link: 'https://muyiy.cn/' },
-      { text: '这波能反杀(js)', link: 'https://www.jianshu.com/u/10ae59f49b13' },
-      { text: '小林(计算机基础)', link: 'https://xiaolincoding.com/' },
-      { text: '小马部落阁', link: 'https://maqib.cn/projects' }
-    ]
-  },
+
   {
     text: '工程化',
     activeMatch: '^/project',
@@ -89,6 +81,16 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/efficiency'
   },
   { text: '导航', link: '/nav', activeMatch: '^/nav' },
+  {
+    text: 'nb博客',
+    items: [
+      { text: '木易杨(js)', link: 'https://muyiy.cn/' },
+      { text: '这波能反杀(js)', link: 'https://www.jianshu.com/u/10ae59f49b13' },
+      { text: '小林(计算机基础)', link: 'https://xiaolincoding.com/' },
+      { text: '小马部落阁', link: 'https://maqib.cn/projects' },
+      { text: '艾编程', link: 'https://www.arryblog.com/' }
+    ]
+  },
   {
     text: 'wh社区',
     items: [

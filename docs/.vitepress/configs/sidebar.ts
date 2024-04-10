@@ -64,6 +64,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
+      text: '博客建站',
+      // collapsed: false,
+      items: [{ text: 'nuxt部署', link: '/project/node/node-aliyun.md' }]
+    },
+    {
       text: 'cli',
       // collapsed: false,
       items: [{ text: '搭建教程', link: '/project/node/node-cli.md' }]
