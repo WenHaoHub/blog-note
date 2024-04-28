@@ -21,6 +21,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Docker', link: '/project/docker/index' },
       { text: 'Webpack', link: '/project/webpack/index.md' },
       { text: 'node', link: '/project/node/index.md' },
+      { text: 'nginx', link: '/project/nginx/index.md' },
       { text: '测试页', link: '/project/test.md' },
     ],
   },
@@ -51,7 +52,6 @@ export const nav: DefaultTheme.Config['nav'] = [
       // {
       //   text: '终端相关',
       //   items: [
-      { text: 'npm 命令', link: '/project/npm/npm-order.md' },
       { text: '命令行工具', link: '/workflow/terminal/toolkit' },
       { text: 'Shell 命令', link: '/workflow/terminal/shell' },
       { text: 'linux 命令', link: '/workflow/terminal/linux' },

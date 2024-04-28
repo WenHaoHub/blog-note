@@ -53,7 +53,7 @@ optimization: {
 }
 ```
 
-## 统计时间
+## 统计时间 {#BuildTimePlugin}
 
 写个 plugin 插件 可以对比启动缓存前后的时间
 
@@ -98,9 +98,3 @@ module.exports = BuildTimePlugin
     - Local:   http://localhost:8081
     - Network: http://192.168.200.173:8081
 ```
-
-下周计划
-
-1. 新综管优化打包速度
-2. 凉山大屏跟进
-3. 缓存学习

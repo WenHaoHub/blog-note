@@ -93,3 +93,8 @@ Markdown 支持创建表格，让你的数据呈现更加整齐清晰。
 | 李四 | 30   |
 
 铁汁，以上语法基本够用了，还有[vitePress](https://vitepress.dev/zh/)扩展语法等你
+
+## 7.本地页面锚点
+
+1. 在/project/webpack/cache 的文件中 里面有锚点{#BuildTimePlugin}
+2. `[参考](/project/webpack/cache#BuildTimePlugin)`

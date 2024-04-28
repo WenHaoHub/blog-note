@@ -47,6 +47,12 @@ npm root -g
 yarn global dir
 ```
 
+## 查看缓存路径
+
+```sh
+npm config get cache
+```
+
 ## 清除缓存
 
 ```sh
@@ -86,6 +92,15 @@ npm bugs
 # 在浏览器中打开指定 npm 包的 GitHub issues
 npm bugs [package-name]
 ```
+
+## 三方包的所有版本
+
+```bash
+npm view <package-name> versions //all
+npm view <package-name> version //最新
+```
+
+希望以上信息对你有所帮助！如果还有其他问题，欢迎随时提问。
 
 ## 脚本命令相关
 

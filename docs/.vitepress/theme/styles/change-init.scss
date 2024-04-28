@@ -1,0 +1,11 @@
+// @import './rainbow.scss';
+//> xxx 语法的样式修改
+.vp-doc blockquote {
+  margin: 16px 0;
+  padding: 6px 0;
+  // border-left: 4px solid var(--vp-c-divider);
+  border-left: 4px solid var(--vp-c-brand);
+  padding-left: 16px;
+  transition: border-color 0.5s;
+  background-color: #f0f0f0;
+}
