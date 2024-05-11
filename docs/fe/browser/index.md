@@ -228,6 +228,13 @@ jsonp('https://www.baidu.com/sugrec', {
 
 ### 协商缓存（304 Not Modified）
 
+#### 触发条件
+
+浏览器**携带缓存标识**向服务器发送请求，服务器根据缓存标识来决定该资源是否过期，一般用于 html 资源，验证版本是否更新
+
+- Cache-Control 的值为 no-cache （协商缓存）
+- 或者 Cache-Control: max-age=0
+
 #### `Last-Modified` 和 `If-Modified-Since`
 
 `Last-Modified` 表示资源的最后修改时间，值为 `GMT` 格式时间字符串，精确到秒
@@ -277,6 +284,10 @@ jsonp('https://www.baidu.com/sugrec', {
 :::
 
 ### 应用场景
+
+:::tip
+一般情况下，浏览器会将 js 和图片等文件解析执行后直接存入内存中，这样当刷新页面时，只需直接从内存中读取(from memory cache)；而 css 文件则会存入硬盘文件中，所以每次渲染页面都需要从硬盘读取缓存(from disk cache)
+:::
 
 | 强缓存                                       | 协商缓存                      |
 | -------------------------------------------- | ----------------------------- |

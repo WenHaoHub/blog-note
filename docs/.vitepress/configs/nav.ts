@@ -22,6 +22,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Webpack', link: '/project/webpack/index.md' },
       { text: 'node', link: '/project/node/index.md' },
       { text: 'nginx', link: '/project/nginx/index.md' },
+      { text: 'ts', link: '/project/ts/ts.md' },
       { text: '测试页', link: '/project/test.md' },
     ],
   },
@@ -84,13 +85,14 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   { text: '导航', link: '/nav', activeMatch: '^/nav' },
   {
-    text: 'nb博客',
+    text: '博客参考',
     items: [
       { text: '木易杨(js)', link: 'https://muyiy.cn/' },
       { text: '这波能反杀(js)', link: 'https://www.jianshu.com/u/10ae59f49b13' },
       { text: '小林(计算机基础)', link: 'https://xiaolincoding.com/' },
       { text: '小马部落阁', link: 'https://maqib.cn/projects' },
       { text: '艾编程', link: 'https://www.arryblog.com/' },
+      { text: 'react', link: 'https://tsejx.github.io/react-guidebook/' },
     ],
   },
   {

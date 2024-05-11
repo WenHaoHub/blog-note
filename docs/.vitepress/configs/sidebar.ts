@@ -56,6 +56,39 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/fe/coding/',
     },
   ],
+  '/project/ts/': [
+    {
+      text: 'npm 相关',
+      // collapsed: false,
+      items: [
+        { text: 'npm 进阶', link: '/project/node/index.md' },
+        { text: 'npm 发包', link: '/project/node/creat-npm.md' },
+        { text: 'npm link', link: '/project/node/npm-link.md' },
+        { text: 'npm 常用命令', link: '/project/node/npm-order.md' },
+        { text: 'npm 常见问题', link: '/project/node/npm-debug.md' },
+      ],
+    },
+    {
+      text: '博客建站',
+      // collapsed: false,
+      items: [{ text: 'nuxt部署', link: '/project/node/node-aliyun.md' }],
+    },
+    {
+      text: 'cli',
+      // collapsed: false,
+      items: [{ text: '搭建教程', link: '/project/node/node-cli.md' }],
+    },
+    {
+      text: 'node',
+      // collapsed: false,
+      items: [
+        { text: '版本统一', link: '/project/node/node-versions.md' },
+        { text: '全局变量', link: '/project/node/node-global.md' },
+        { text: 'node_modules补丁 ', link: '/project/node/node-patch.md' },
+        { text: '模块规范 ', link: '/project/node/node-模块规范.md' },
+      ],
+    },
+  ],
   '/project/node/': [
     {
       text: 'npm 相关',
@@ -102,7 +135,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '函数式组件', link: '/project/vue/function-component.md' },
           ],
         },
-        { text: 'React', link: '/project/react/index' },
+        {
+          text: 'React',
+          link: '/project/react/index',
+          items: [
+            { text: 'hooks', link: '/project/react/hooks.md' },
+            { text: 'fiber', link: '/project/react/fiber.md' },
+            { text: 'redux', link: '/project/react/redux.md' },
+            { text: 'router', link: '/project/react/router.md' },
+          ],
+        },
         { text: 'Docker', link: '/project/docker/index' },
         {
           text: 'Webpack',

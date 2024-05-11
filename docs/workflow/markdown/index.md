@@ -98,3 +98,21 @@ Markdown 支持创建表格，让你的数据呈现更加整齐清晰。
 
 1. 在/project/webpack/cache 的文件中 里面有锚点{#BuildTimePlugin}
 2. `[参考](/project/webpack/cache#BuildTimePlugin)`
+
+## 文件夹
+
+```js
+├── a.js
+├── b.js
+├── c.js
+├── d.js
+├── e.js
+├── f.js
+├── g.js
+├── index.js
+├── node_modules
+│ ├── x.js
+│ ├── y.js
+│ └── z.js
+└── webpack.config.js
+```
