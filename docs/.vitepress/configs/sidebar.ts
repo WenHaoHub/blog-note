@@ -11,6 +11,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '类型转换', link: '/fe/javascript/conversions' },
         { text: '原型和原型链', link: '/fe/javascript/prototype' },
         { text: '继承', link: '/fe/javascript/inherit' },
+        { text: 'this指向', link: '/fe/javascript/this' },
       ],
     },
     {
@@ -48,8 +49,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
     {
+      text: 'WebSocket',
+      link: '/fe/WebSocket.md',
+    },
+    {
       text: 'axios',
       link: '/fe/axios.md',
+    },
+    {
+      text: '实现篇',
+      link: '/fe/实现篇.md',
     },
     {
       text: '编程题',
