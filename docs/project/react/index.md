@@ -25,13 +25,13 @@
 1. 每个 jsx 对象最外层必须有个跟标签 ，可以用空标签`<></>`
 2. 绑定事件注意要用驼峰命名 `{this.clickTest}`
 3. 添加类名的时候，注意要用 `className` ,比如 `className="test"`
-4. 添加行内样式的时候，style 属性接受的是一个对象，比如 `style={{color:'red'}}`,两个`{{}}`
+4. 添加行内样式的时候，style 属性接受的是一个对象，比如 style=【【color:'red'】】`,两个`{}`
 
 ### 组件动态化
 
 1. **外部数据**（外部属性 _props_）
 
-   - 给组件传递外部属性 <Hello msg="hello world"/>
+   - 给组件传递外部属性 `<Hello msg="hello world"/>`
 
    - 在 Hello 组件内部通过 this.props.msg 访问
 

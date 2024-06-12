@@ -2,6 +2,36 @@
 
 原型和原型链是 `JavaScript` 中非常重要的概念，其对于理解 `JavaScript` 的对象模型和继承非常重要。通过原型和原型链，我们可以实现基于原型的继承、寄生式继承、组合式继承等多种继承方式，从而使代码更加简洁、易读、易于维护。
 
+## 大致理解
+
+- **prototype** 原型 | 原型属性 | 显示原型
+  1.  是函数的一个属性
+  2.  是一个对象
+  3.  创建函数的时候会默认添加 prototype 属性
+- ****proto**** 隐式原型
+  1.  【对象】的属性
+  2.  指向构造函数的 portotype
+
+```js
+function foo(name) {
+  this.name = name
+}
+let bar = new foo('test')
+console.log('>>>', bar)
+console.log('>>>', bar.__proto__ === foo.prototype) //true
+console.dir(foo.prototype.__proto__ === Object.prototype) //true
+console.dir(foo === foo.prototype.constructor) //true
+console.dir(Object.prototype)
+
+// bar: {
+//   __proto__: foo.prototype = {
+//     __proto__: Object.prototype = {
+//       __proto__: null
+//     }
+//   }
+// }
+```
+
 ## 构造函数与实例
 
 使用 `new` 运算符与构造函数是常用的创建对象的方式之一。构造函数是一种特殊的函数，用于创建新的对象实例，当我们使用 `new` 运算符调用一个函数时，它就成为了构造函数，因为它被用来构造一个新的对象实例

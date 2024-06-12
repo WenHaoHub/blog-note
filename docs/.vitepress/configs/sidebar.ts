@@ -12,6 +12,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '原型和原型链', link: '/fe/javascript/prototype' },
         { text: '继承', link: '/fe/javascript/inherit' },
         { text: 'this指向', link: '/fe/javascript/this' },
+        { text: '闭包', link: '/fe/javascript/closure' },
       ],
     },
     {
