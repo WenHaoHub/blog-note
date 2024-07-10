@@ -143,6 +143,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           items: [
             { text: 'v-model高阶', link: '/project/vue/v-model.md' },
             { text: '函数式组件', link: '/project/vue/function-component.md' },
+            { text: 'Vuex使用', link: '/project/vue/vuex.md' },
+            { text: 'data', link: '/project/vue/data.md' },
           ],
         },
         {
