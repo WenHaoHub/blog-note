@@ -1,19 +1,21 @@
-function myInstanceof(left, right) {
-  // 取右边构造函数的 prototype 值
-  const prototype = right.prototype
-  // 取左边实例的 __proto__ 值
-  left = left.__proto__
+function myInstanceof(obj, Constructor) {
+  // 获取对象的原型
+  let proto = Object.getPrototypeOf(obj)
+  // 获取构造函数的原型
+  let prototype = Constructor.prototype
 
-  while (true) {
-    // 当左边实例的 __proto__ 为 null 时返回 false
-    if (left === null) {
-      return false
-    }
-    // 判断左右两边的原型是否一致
-    if (left === prototype) {
-      return true
-    }
-    // 修改 __proto__
-    left = left.__proto__
+  // 循环查找原型链上是否有构造函数的原型
+  while (proto) {
+    if (proto === prototype) return true
+    proto = Object.getPrototypeOf(proto)
   }
+
+  return false
 }
+
+function C() {}
+
+var o = new C()
+
+console.log(o instanceof C) // true，因为Object.getPrototypeOf(o) === C.prototype
+console.log(o instanceof Object) // true，因为C.prototype继承自Object.prototype

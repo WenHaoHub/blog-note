@@ -295,7 +295,7 @@ Accept /əkˈsept/
 
 - **Cache-Control**: 缓存机制。
 
-  告诉所有的[缓存机制](/fe/browser/index.md/#浏览器缓存机制)是否可以缓存及哪种类型
+  <!-- 告诉所有的[缓存机制](/fe/browser/index.md/#浏览器缓存机制)是否可以缓存及哪种类型 -->
 
   ```json
   Cache-Control: no-cache
