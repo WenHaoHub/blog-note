@@ -43,7 +43,7 @@ export default defineConfig({
 
     footer: {
       copyright: '©️ Copyright (c) 2024 wenhao ',
-      message: '👮备案号: 蜀ICP备2024061733号',
+      message: '👮备案号: 蜀ICP备2024061733号-2',
       // message: '引用：https://github.com/maomao1996/vitepress-nav-template',
     },
 

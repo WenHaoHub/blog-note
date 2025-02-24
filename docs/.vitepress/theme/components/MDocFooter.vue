@@ -21,7 +21,7 @@ const DEV = inject('DEV') as Ref<boolean>
   <p class="notice">
     <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">
       👮备案号:
-      <span>蜀ICP备2024061733号</span>
+      <span>蜀ICP备2024061733号-2</span>
     </a>
   </p>
 </template>
