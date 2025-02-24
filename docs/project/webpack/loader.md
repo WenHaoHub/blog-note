@@ -99,3 +99,4 @@ loader 的作用是将代码进行转换，比如 less 转成 css，一个 loade
 ## demo 地址
 
 [编写一个 loader](https://github.com/WenHaoHub/webpack)
+[编写一个 loader](https://github.com/WenHaoHub/webpack)
