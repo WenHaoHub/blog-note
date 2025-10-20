@@ -76,6 +76,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '浏览器设置与扩展', link: '/efficiency/software/browser' },
           { text: 'Visual Studio Code 配置', link: '/efficiency/software/vscode' },
           { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' },
+          { text: 'copilot 配置', link: '/efficiency/software/copilot' },
         ],
       },
       { text: '在线工具', link: '/efficiency/online-tools' },
