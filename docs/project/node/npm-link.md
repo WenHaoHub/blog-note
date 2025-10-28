@@ -17,7 +17,7 @@ link 的本质就是软链接，这样可以让我们快速使用本地正在开
 1、执行 `npm link` 时输出了这段代码：
 
 ```javascript
-/usr/local/lib/node_modules/link-module -> /Users/shiyou/Desktop/link-module
+D:\nvm\nodejs\node_modules\eoss-ui -> D:\cdzs\eoss\eoss-ui
 ```
 
 意思是在公共包管理路径`/usr/local/lib/node_modules/`连接了本地的`link-module`包。
@@ -61,6 +61,85 @@ link 的本质就是软链接，这样可以让我们快速使用本地正在开
    bash   cd path/to/project-a
    npm unlink
    ```
+
+## 调试
+
+先在 eoss 中下载好依赖，执行 dist 命令
+项目Ａ调试本地 eoss-ui 库 bash 窗口执行 sh 此代码文件名 link
+
+```
+#!/bin/bash
+
+# 第三方库的名称
+LIBRARY_NAME="eoss-ui"
+# 第三方库的本地路径
+LIBRARY_PATH="D:\cdzs\eoss\eoss-ui"
+
+# 函数：链接库
+link_library() {
+    echo "链接到本地库 $LIBRARY_NAME ..."
+    cd $LIBRARY_PATH && npm link
+    cd - && npm link $LIBRARY_NAME
+    echo "已链接到本地库 $LIBRARY_NAME."
+}
+
+# 函数：断开链接
+unlink_library() {
+    echo "断开与本地库 $LIBRARY_NAME 的链接..."
+    npm unlink $LIBRARY_NAME
+    cd $LIBRARY_PATH && npm unlink
+    echo "已断开与本地库 $LIBRARY_NAME 的链接."
+}
+
+# 检查命令行参数
+if [ "$1" = "link" ]; then
+    link_library
+elif [ "$1" = "unlink" ]; then
+    unlink_library
+else
+    echo "Usage: $0 [link|unlink]"
+fi
+```
+
+将文件引用指到本地
+
+```
+const useLocalEossUi = process.env.USE_LOCAL_EOSS_UI === 'true';
+console.log(
+	'>>>',
+	process.env.USE_LOCAL_EOSS_UI,
+	useLocalEossUi ? '使用本地 eoss-ui 源码' : '使用线上 eoss-ui 包'
+);
+const eossUiSrc = path.resolve(__dirname, 'node_modules/eoss-ui/src');
+const eossUiPackages = path.resolve(__dirname, 'node_modules/eoss-ui/packages');
+const eossUiTheme = path.resolve(__dirname, 'node_modules/eoss-ui/lib/theme-chalk');
+chainWebpack: config => {
+		const alias = config.resolve.alias;
+		alias.set('vue$', 'vue/dist/vue.esm.js').set('@', path.join(__dirname, 'src'));
+		if (useLocalEossUi) {
+			// 使用本地源码：JS 指到 src，组件包路径指到 packages
+			alias
+				.set('eoss-ui$', path.join(eossUiSrc, 'index.js'))
+				.set('eoss-ui/packages', eossUiPackages)
+				// 样式依旧使用已编译好的 lib/theme-chalk，避免找不到源码样式
+				.set('eoss-ui/lib/theme-chalk', eossUiTheme);
+		}
+	},
+```
+
+package.json
+
+```
+"scripts": {
+		"serve": "vue-cli-service serve",
+		...
+		"serve:local": "cross-env USE_LOCAL_EOSS_UI=true vue-cli-service serve",
+		"serve:remote": "cross-env USE_LOCAL_EOSS_UI=false vue-cli-service serve"
+	},
+  devDependencies:{
+    "cross-env": "^7.0.3",
+  }
+```
 
 ## 注意事项
 
