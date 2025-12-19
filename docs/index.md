@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: wh的知识库
   text: 不积跬步 无以至千里
-  tagline: 借鉴 探索 沉淀 回报
+  tagline: Keep It Simple, Stupid. 简单性是最高的智慧
   image:
     src: /logo.png
     alt: wenhao的的博客
@@ -45,8 +45,8 @@ features:
     link: /project/node/
     linkText: 关于node
   - icon: ✍️
-    title: 忆往昔
-    details: '<small class="bottom-small">想写一些往事随笔</small>'
+    title: test
+    details: '<small class="bottom-small">测试</small>'
     link: /mao
 ---
 

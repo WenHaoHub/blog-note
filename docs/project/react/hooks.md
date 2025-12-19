@@ -1,74 +1,12 @@
-# 类组件
+# why Hooks
 
-## state
+1. `多个组件间逻辑复用`: 在 Class 中使用 React 不能将带有 state 的逻辑给单独抽离成 function, 其只能通过嵌套组件的方式来解决多个组件间逻辑复用的问题, 基于嵌套组件的思想存在 [HOC](https://github.com/MuYunyun/blog/blob/master/React/从0到1实现React/8.HOC探索.md) 与 `render props` 两种设计模式
+2. `单个组件中的逻辑复用`: Class 中的生命周期 `componentDidMount`、`componentDidUpdate` 甚至 `componentWillUnMount` 中的大多数逻辑基本是类似的, 必须拆散在不同生命周期中维护相同的逻辑对使用者是不友好的, 这样也造成了组件的代码量增加。
+3. Class 的其它一些问题: 在 React 使用 Class 需要书写大量样板, 用户通常会对 Class 中 Constructor 的 bind 以及 this 的使用感到困惑
 
-```js
-1、通过申明式地定义state
-class App extends Component {
-state = {
-  num: 10,
-}
-render() {
-  const { num } = this.state;     //解构state中的num
-  return <h1>num - {num}</h1>
- }
-}
-2、通过构造函数的构造器constructor来定义state,当我们去实例化这个类的时候，它是会自动执行的
-class App extends Component {
-constructor() {
-   // 用于继承父类，只有调用过super之后才能使用this
-  super();
-  this.state = {
-    num: 10,
-  }
-}
-render() {
-  return (
-    <>
-      <p>
-        num - {this.state.num}
-      </p>
-    </>
-  )
-}
-}
+## useState
 
-! setState在合成事件是异步的
-! setState在生命周期里是异步的
-! setState在定时器里面是同步的
-! setState在原生js里面是同步的
-
-//setState有两种写法
-//第一种是里面写对象,允许setState传第二个参数，是回调函数
-  this.setState(               //需要修正this的指向
-    {
-      count: 10,
-    },
-    () => {
-      console.log(this.state.count);
-    }
-  );
-
-//第二种方式是里面写函数, 可以接收一个参数(任意形参)，表示前一次的state,允许setState传第二个参数，是回调函数
-  this.setState(                                  //需要修正this的指向
-    (prevState) => {
-      return {
-          list: prevState.list.concat(item),      //list: [...prevState.list, item],
-      };
-    },
-    () => {
-      console.log(this.state.item);
-    }
-  );
-```
-
-# hooks
-
-## 常用 hooks
-
-### setState
-
-#### 核心原理
+### 核心原理
 
 ```js
 // 1. 初始定义数组和下标
@@ -121,9 +59,9 @@ console.log('>>>num1', num1, num2)
 // num2=100  setNum=setState 0x002
 ```
 
-### useEffect
+## useEffect
 
-#### 核心原理
+### 核心原理
 
 ```js
 // 定义
@@ -164,7 +102,7 @@ useEffect 在 render 渲染结束后执行
 
 - 如果没有第二个参数，那么它相当于 `componentDidMount` 和 `componentDidUpdate`;每次数据改变都会刷新
 
-  ```js
+  ```jsx
   useEffect(() => {
     console.log()
   })
@@ -172,7 +110,7 @@ useEffect 在 render 渲染结束后执行
 
 - 第二个参数是一个数组，数组中存放依赖；如果是空数组，那么它只相当于 `componentDidMount`，可以用作数据请求
 
-  ```js
+  ```jsx
   useEffect(() => {
     callback()
   }, [])
@@ -214,13 +152,13 @@ useEffect 在 render 渲染结束后执行
 
 :::tip 优化理念
 
-- 好的页面设计师不需要 hooks 优化的
+- 好的页面设计师不需要 hooks 优化的，一般在开发完成后用性能分析工具结合优化
 - 抽离不变和变化的组件
 - 在大部分情况下，你可能并不需要它，如果没有经过性能测量确认，过早的优化可能适得其反。打个比方说，如果你的函数计算很快，useMemo 反而会
   因为额外的记忆化操作带来负担。所以 useMemo 更适用于那些被证实为性能瓶颈的场景。
   :::
 
-### memo
+## memo
 
 - React 的 `memo` 是一个高阶组件，用于对函数组件进行性能优化。当你使用 `React.memo` 包裹一个组件时，React 将会对该**组件**的 props 进行浅比较，如果 props 没有改变，那么 React 将重用上一次渲染的结果，从而避免不必要的渲染。
 
@@ -281,7 +219,7 @@ const MyComponent = React.memo(MyComponent, (prevProps, nextProps) => {
    需要注意的是，`React.memo` 并非对所有场景都能产生积极效果，它有一些开销，例如对 props 的比较和对旧渲染结果的缓存，可能会影响应用的性能。在大多数场景中，你可能不需要使用 `React.memo`，对于一些小的、简单的组件，使用 `React.memo` 可能并不能带来明显的性能提升，甚至可能会让性能表现变差。因此，你应当在确定确实会带来性能优化的情况下再考虑使用它，避免过度优化。
    :::
 
-### useCallback
+## useCallback
 
 > 用于父组件的函数缓存优化，避免父组件状态变化导致的传递给子组件的函数重新渲染
 > 通常配合`memo`使用
@@ -324,7 +262,7 @@ const A = memo((props: any) => {
 
 将回调函数作为 `props` 传递给 `React.memo` 或 `PureComponent` 包装的子组件时，使用 `useCallback` 是非常有效的。这是因为 React.memo 和 PureComponent 通过浅比较 props 来避免不必要的渲染。如果你在父组件中不使用 useCallback，那么每次父组件渲染时都会创建一个新的函数实例，即使这个函数做的事情完全一样。这将会导致子组件无法确定 props 是否真的变化了，从而触发不必要的渲染。
 
-### useMemo
+## useMemo
 
 > useMemo 用于缓存复杂计算的结果，减少不必要的渲染性能开销。以下是正确使用 useMemo 的一些关键点：
 
@@ -367,3 +305,20 @@ const A = memo((props: any) => {
 `useCalllback` 是一个钩子（Hook），记忆化的是函数,**传递函数**给经过优化（`memo`或 `PureComponent）的子组件。通过依赖项列表
 
 `useMemo` 是一个钩子（Hook），记忆化的是值,缓存一个计算过程,它可以在**组件内部**保持复杂值的计算结果。通过依赖项列表
+
+## 替代 class 组件方案
+
+### 替代 forceUpdate
+
+可以使用 `useReducer` 来 hack `forceUpdate`, 但是尽量避免 forceUpdate 的使用
+基本原理：
+
+1. 每次调用 forceUpdate()（实际是调用 dispatch），reducer 函数会执行 x => x + 1 状态值从 0 → 1 → 2 → 3...，状态不断改变
+2. 为什么用 x => x + 1 而不是其他？ - 这个 reducer 函数足够简单且保证每次执行都返回不同的值，这样就能保证每次都有状态变化
+
+```jsx
+const [ignored, forceUpdate] = useReducer((x) => x + 1, 0)
+function handleClick() {
+  forceUpdate()
+}
+```
